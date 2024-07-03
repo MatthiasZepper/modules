@@ -1,0 +1,2 @@
+umitransfer/external:
+  - "modules/nf-core/umitransfer/external/**"
