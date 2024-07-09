@@ -11,10 +11,10 @@ tools:
   - "umitransfer":
       ## TODO nf-core: Add a description and other details for the software below
       description: "A tool for transferring Unique Molecular Identifiers (UMIs) from a separate FastQ file."
-      homepage: "None"
-      documentation: "None"
-      tool_dev_url: "None"
-      doi: ""
+      homepage: "https://zenodo.org/records/12581603"
+      documentation: "https://github.com/SciLifeLab/umi-transfer"
+      tool_dev_url: "https://github.com/SciLifeLab/umi-transfer"
+      doi: "10.5281/zenodo.12581602"
       licence: ['MIT']
 
 ## TODO nf-core: Add a description of all of the variables used as input
@@ -25,7 +25,7 @@ input:
       description: |
         Groovy Map containing sample information
         e.g. `[ id:'sample1', single_end:false ]`
-  
+
   ## TODO nf-core: Delete / customise this example input
   - bam:
       type: file
@@ -40,7 +40,7 @@ output:
       description: |
         Groovy Map containing sample information
         e.g. `[ id:'sample1', single_end:false ]`
-  
+
   - versions:
       type: file
       description: File containing software versions

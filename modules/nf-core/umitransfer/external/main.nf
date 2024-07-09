@@ -25,8 +25,8 @@ process UMITRANSFER_EXTERNAL {
     // TODO nf-core: See section in main README for further information regarding finding and adding container addresses to the section below.
     conda "${moduleDir}/environment.yml"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'https://depot.galaxyproject.org/singularity/YOUR-TOOL-HERE':
-        'biocontainers/YOUR-TOOL-HERE' }"
+        'https://depot.galaxyproject.org/singularity/umi-transfer%3A1.5.0--h715e4b3_0':
+        'biocontainers/umi-transfer:1.5.0--h715e4b3_0' }"
 
     input:
     // TODO nf-core: Where applicable all sample-specific information e.g. "id", "single_end", "read_group"
@@ -69,7 +69,7 @@ process UMITRANSFER_EXTERNAL {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        umitransfer: \$(samtools --version |& sed '1!d ; s/samtools //')
+        umi-transfer: \$(samtools --version |& sed '1!d ; s/samtools //')
     END_VERSIONS
     """
 
@@ -85,7 +85,7 @@ process UMITRANSFER_EXTERNAL {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        umitransfer: \$(samtools --version |& sed '1!d ; s/samtools //')
+        umi-transfer: \$(samtools --version |& sed '1!d ; s/samtools //')
     END_VERSIONS
     """
 }
